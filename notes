@@ -1,0 +1,13 @@
+Category
+has_many :events 
+:name - string 
+
+Events 
+belongs_to :category
+:category_id - integer (id of specific category)
+:image_url - string
+:name - string 
+:summary - string 
+:when - string 
+:time - string 
+:where - string 
