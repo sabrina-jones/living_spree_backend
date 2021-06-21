@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
     has_many :events
-    validadtes :name, presence: true
+    validates :name, presence: true
 end
