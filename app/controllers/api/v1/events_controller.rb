@@ -16,7 +16,7 @@ class Api::V1::EventsController < ApplicationController
     def create
         @event = @category.events.new(event_params)
         if @event.save
-            render json: @event
+            render json: @category
         else
             render json: {error: "Error creating event"}
         end
