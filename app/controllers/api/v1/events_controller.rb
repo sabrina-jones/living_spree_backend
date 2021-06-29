@@ -23,8 +23,10 @@ class Api::V1::EventsController < ApplicationController
     end 
 
     def destroy
-        @event = Event.find(params[:id])
+        @event = Event.find(params["id"])
+        @category = Category.find(@event.category_id)
         @event.destroy
+        render json: @category
     end 
 
     private
